@@ -1,0 +1,44 @@
+---
+import Header from "./Header.astro";
+---
+
+<section class="h-screen w-screen relative">
+  <video
+    class="absolute z-0 w-full h-full object-cover"
+    src="/src/videos/video.mp4"
+    autoplay
+    muted
+    loop></video>
+
+  <div class="z-10 relative">
+    <Header />
+    <h1
+      class="flex justify-center md:text-9xl text-4xl font-bold md:py-10 py-20 typewriter bg-clip-text text-transparent bg-gradient-to-b from-rose-100 to-teal-100"
+    >
+    </h1>
+    <div class="flex justify-center md:mt-[390px] mt-[350px]">
+      <button
+        class="border-2 border-white px-10 py-4 text-white rounded-full font-extrabold text-2xl transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:-translate-y-1 hover:ring-4 hover:ring-white hover:ring-opacity-50 hover:bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+        aria-label="Comprar Ahora">SHOP NOW</button
+      >
+    </div>
+  </div>
+  <script>
+    window.addEventListener("DOMContentLoaded", (event) => {
+      const text = "ContinuousBrand"; // El texto que se va a animar
+      const delay = 100; // Tiempo entre cada letra en milisegundos
+      let i = 0;
+      let animatedText = "";
+
+      function typingAnimation() {
+        if (i < text.length) {
+          animatedText += text.charAt(i);
+          document.querySelector(".typewriter").textContent = animatedText;
+          i++;
+          setTimeout(typingAnimation, delay);
+        }
+      }
+      typingAnimation();
+    });
+  </script>
+</section>

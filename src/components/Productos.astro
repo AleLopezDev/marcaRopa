@@ -1,0 +1,36 @@
+---
+import { productos } from "../js/productos.js";
+---
+
+<link rel="stylesheet" href="../cssPersonalizado/bordeColor.css" />
+<div class="bg-white flex justify-center pb-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 gap-y-6">
+        {
+            productos.map((producto) => (
+                <div class="cursor-pointer shadow-lg rounded-lg p-4 border-2 relative overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-500">
+                    <div class="absolute border-2 border-black h-full w-full top-0 left-0 animate-pulse c" />
+                    <img
+                        src={producto.img}
+                        alt=""
+                        class="rounded relative z-10 transition-opacity duration-500 hover:opacity-80"
+                    />
+                    <div class="flex justify-between mt-4 relative z-10">
+                        <h3 class="mr-2 font-bold text-4xl transition-colors duration-500 ">
+                            {producto.nombre}
+                        </h3>
+                        <p class="text-2xl mt-2 transition-colors duration-500 ">
+                            {producto.precio}
+                        </p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</div>
+<div class="flex justify-center bg-white pb-5">
+    <button
+        class="border-2 border-black px-4 sm:px-4 md:px-6 py-2 rounded-full text-lg sm:text-sm md:text-4xl font-semibold font-sans transition-all duration-300 ease-in-out transform hover:scale-90 hover:bg-black hover:text-white my-1"
+    >
+        ALL</button
+    >
+</div>

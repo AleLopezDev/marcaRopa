@@ -1,0 +1,177 @@
+<div class="flex justify-between items-center">
+  <div id="divImg" class="md:flex-grow md:flex justify-start px-4">
+    <img
+      id="imgLogo"
+      src="https://continuousbrand.com/wp-content/uploads/2022/09/Continuous-White-2048x327.png"
+      alt="Imagen"
+      class="md:w-52 md:h-16 w-25 h-12 cursor-pointer py-4"
+    />
+  </div>
+
+  <!-- Menu Burger -->
+
+  <div id="burgerSvg" class="md:hidden flex justify-end md:px-4 px-0">
+    <svg
+      id="menuBurger"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6 mr-2 md:flex text-white"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+    </svg>
+  </div>
+
+  <div id="menuMini" class="hidden">
+    <!-- Boton de Cierre -->
+    <div class="relative flex h-screen w-screen bg-blue-950">
+      <div class="absolute right-0 p-4">
+        <svg
+          id="menuCierre"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6 text-white"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </div>
+
+      <nav class="flex justify-center items-center h-screen w-screen">
+        <ul>
+          <li
+            class="cursor-pointer font-robot text-white transition-colors duration-200 ease-in-out hover:text-yellow-300"
+          >
+            Productos
+          </li>
+          <li
+            class="cursor-pointer font-robot text-white transition-colors duration-200 ease-in-out hover:text-yellow-300"
+          >
+            Colecciones
+          </li>
+          <li
+            class="cursor-pointer font-robot text-white transition-colors duration-200 ease-in-out hover:text-yellow-300 whitespace-nowrap"
+          >
+            Sobre Nosotros
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Final Menu Burger -->
+  <nav class="hidden md:flex">
+    <ul class="flex space-x-6">
+      <li
+        class="cursor-pointer font-robot text-white transition-colors duration-200 ease-in-out hover:text-yellow-300"
+      >
+        Productos
+      </li>
+      <li
+        class="cursor-pointer font-robot text-white transition-colors duration-200 ease-in-out hover:text-yellow-300"
+      >
+        Colecciones
+      </li>
+      <li
+        class="cursor-pointer font-robot text-white transition-colors duration-200 ease-in-out hover:text-yellow-300 whitespace-nowrap"
+      >
+        Sobre Nosotros
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="md:flex flex-grow justify-end px-4 hidden">
+    <ul class="flex space-x-4">
+      <li>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6 text-white cursor-pointer transition-transform duration-200 ease-in-out hover:scale-125"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+          ></path>
+        </svg>
+      </li>
+      <li>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6 text-white cursor-pointer transition-transform duration-200 ease-in-out hover:scale-125"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+          ></path>
+        </svg>
+      </li>
+      <li>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6 cursor-pointer text-white transition-transform duration-200 ease-in-out hover:scale-125"
+          aria-label="Mostrar lista"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+          ></path>
+        </svg>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<script>
+  const menuBurger = document.getElementById("menuBurger");
+
+  menuBurger?.addEventListener("click", () => {
+    document.getElementById("imgLogo")?.classList.add("hidden");
+    document.getElementById("burgerSvg")?.classList.add("hidden");
+    document.getElementById("divImg")?.classList.add("hidden");
+
+    document.getElementById("menuMini")?.classList.remove("hidden");
+  });
+
+  const menuCierre = document.getElementById("menuCierre");
+  menuCierre?.addEventListener("click", () => {
+    console.log("click");
+    document.getElementById("menuMini")?.classList.add("hidden");
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+      // 768 es el breakpoint típico para 'md' en Tailwind
+      document.getElementById("imgLogo")?.classList.remove("hidden");
+      document.getElementById("burgerSvg")?.classList.remove("hidden");
+      document.getElementById("divImg")?.classList.remove("hidden");
+
+      document.getElementById("menuMini")?.classList.add("hidden");
+    } else {
+      document.getElementById("menuBurger")?.classList.add("flex");
+    }
+  });
+</script>

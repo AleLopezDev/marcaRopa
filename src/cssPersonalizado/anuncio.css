@@ -1,0 +1,22 @@
+.marquee {
+  display: flex;
+  width: 200%; /* Doblar el ancho para acomodar dos bloques de texto */
+  animation: marquee 10s linear infinite;
+}
+
+.marquee p {
+  width: 50%; /* Cada bloque de texto ocupa la mitad del ancho total */
+  padding: 0 2rem;
+  color: #fff;
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
